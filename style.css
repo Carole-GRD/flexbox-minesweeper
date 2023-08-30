@@ -60,6 +60,7 @@
     position: relative;
 }
 
+
 /* LIGNES PLEINES AUTOUR DES CASES NON CLIQUEES (EN RELIEF) */
 .rb {
     border-right: 3px solid black;
@@ -91,6 +92,7 @@ img {
 
 
 /* RELIEF ( CASES NON CLIQUEES) */
+/* ---------------------------- */
 
 /* AFFICHES */
 .empty {
@@ -102,26 +104,22 @@ img {
     border-top-color: white;
     border-right-color: grey;
     border-bottom-color: grey;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     opacity: 1;
     visibility: visible;
-    position: absolute;
     transition: opacity 2s, visibility 2s;
 }
+
 /* CACHES */
 .relief:hover > .empty {
     opacity: 0;
     visibility: hidden;
-    position: absolute;
     transition: opacity .2s, visibility .2s;
 }
 
 
 
 /* BOMBES ET NUMERAUX */
+/* ------------------ */
 
 /* CACHES */
 .bombe, .num {

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch&family=Montserrat&family=Open+Sans:wght@300;400&family=Press+Start+2P&family=Raleway:wght@300&family=Rubik&family=Rubik+Iso&family=Sedgwick+Ave+Display&display=swap');
+
+
+/* font-family: 'Black Ops One', cursive;
+font-family: 'Chakra Petch', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rubik', sans-serif;
+font-family: 'Rubik Iso', cursive;
+font-family: 'Sedgwick Ave Display', cursive; */
+
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 445px;
+    height: 445px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.border {
+    border: 10px solid #c4c4c4;
+    border-right-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    height: 440px;
+}
+
+.content {
+    border: 50px solid #808080;
+    border-right-color: white;
+    border-bottom-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+    height: 420px;
+}
+
+.row {
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+}
+
+
+.case {
+    /* border: 1px solid orange; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 3px dashed black;
+    border-style: none dashed dashed none;
+    border-spacing: 5px;
+    background-color: #c4c4c4;
+}
+
+
+.rb {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+img {
+    /* border: 1px solid violet; */
+    height: 75px;
+}
+
+.one, .two, .three {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.one {
+    color: blue;
+}
+
+.two {
+    color: green;
+}
+
+.three {
+    color: crimson;
+}
+
+
+.empty {
+    width: 47px;
+    height: 47px;
+    border-width: 4px;
+    border-style: solid;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: grey;
+    border-bottom-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relief:hover > .empty {
+    display: none;
+}
+
+.bombe, .num {
+    display: none;
+}
+
+.relief:hover > .bombe,
+.relief:hover > .num {
+    display: block;
+}
+
+

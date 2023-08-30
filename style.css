@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch&family=Montserrat&family=Open+Sans:wght@300;400&family=Press+Start+2P&family=Raleway:wght@300&family=Rubik&family=Rubik+Iso&family=Sedgwick+Ave+Display&display=swap');
 
-
-/* font-family: 'Black Ops One', cursive;
-font-family: 'Chakra Petch', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Press Start 2P', cursive;
-font-family: 'Raleway', sans-serif;
-font-family: 'Rubik', sans-serif;
-font-family: 'Rubik Iso', cursive;
-font-family: 'Sedgwick Ave Display', cursive; */
-
-
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -55,14 +43,11 @@ font-family: 'Sedgwick Ave Display', cursive; */
 }
 
 .row {
-    /* border: 1px solid green; */
     display: flex;
     flex-direction: row;
 }
 
-
 .case {
-    /* border: 1px solid orange; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,37 +57,44 @@ font-family: 'Sedgwick Ave Display', cursive; */
     border-style: none dashed dashed none;
     border-spacing: 5px;
     background-color: #c4c4c4;
+    
 }
 
-
+/* LIGNES PLEINES AUTOUR DES CASES NON CLIQUEES (EN RELIEF) */
 .rb {
     border-right: 3px solid black;
     border-bottom: 3px solid black;
 }
 
+
+/* MISE EN FORME DES IMAGES DE BOMBES */
 img {
-    /* border: 1px solid violet; */
     height: 75px;
 }
 
+
+/* MISE EN FORME DES NUMERAUX */
 .one, .two, .three {
     font-size: 2rem;
     font-weight: 600;
 }
-
 .one {
     color: blue;
 }
-
 .two {
     color: green;
 }
-
 .three {
     color: crimson;
 }
 
 
+
+/* RELIEF ( CASES NON CLIQUEES) */
+.row {
+    position: relative;
+}
+/* AFFICHES */
 .empty {
     width: 47px;
     height: 47px;
@@ -115,19 +107,41 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    transition: opacity 2s, visibility 2s;
+}
+/* CACHES */
 .relief:hover > .empty {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity .2s, visibility .2s;
 }
 
+
+
+/* BOMBES ET NUMERAUX */
+.relief {
+    position: relative;
+}
+
+/* CACHES */
 .bombe, .num {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: opacity .2s, visibility .2s;
 }
 
+/* AFFICHES */
 .relief:hover > .bombe,
 .relief:hover > .num {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s, visibility 2s;
 }
 
 
